@@ -17,8 +17,8 @@
     background-color: #322c2d;
     box-shadow: 1px 1px #322c2d;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: right;
     padding-right: 8%;
     font-size: 5.0rem;
   }
@@ -36,10 +36,10 @@
       border-radius: 50%;
       margin:10px 10px;
       font-size:30px;
-      border:2px solid black;
-      background-color:rgb(24, 24, 111);
+      border:2px solid #18186f;
+      background-color:#18186f;
       color:#fff;
-
+      box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
   }
 .numberButtons:nth-child(10){
     width:180px;
@@ -57,13 +57,14 @@
 .operatorButton{
   
     background-color:dodgerblue;
-    border:2px solid black;
+    border:2px solid dodgerblue;
     height:80px;
     width:80px;
     border-radius: 50%;
     margin:10px -15px;
     font-size:30px;
     color:#fff;
+    box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
 
 }
 .allContainer{
@@ -82,7 +83,8 @@
     margin:10px;
     background-color:rgb(30, 105, 130);
     font-size: 30px;
-    border:2px solid black;
+    border:2px solid rgb(30, 105, 130);
     color:#fff;
+    box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
 
 }
