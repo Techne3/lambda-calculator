@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers'
 import Operators from './components/ButtonComponents/OperatorButtons/Operators'
 import Specials from './components/ButtonComponents/SpecialButtons/Specials';
+// import Display from './components/DisplayComponents/Display'
 
 
 
@@ -21,16 +22,66 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
+  const [firstNumber, setFirstNumber] = useState("")
+  const [secondNumber, setSecondNumber] = useState("")
+  const [selectedOperator, setSelectedOperator] = useState("")
+  const [total, setTotal] = useState("")
+
+  const selectOperator = (operator) => {
+    if ( selectedOperator === "" ) {
+      setSelectedOperator(operator)
+    } 
+    if ( operator === "=" ) {
+      // console.log("showtotal", {showTotal})
+      showTotal()
+    }
+  }
+ 
+
+  console.log(firstNumber)
+  const selectNumber = (Numbers) => {
+    if ( selectedOperator === "" ) {
+      setFirstNumber(`${firstNumber}${Numbers}`)
+    } else {
+      setSecondNumber(`${secondNumber}${Numbers}`)
+    }
+  }
+
+  const showTotal = () => {
+    // console.log("firstNum",{firstNumber})
+    // console.log("secondNum",{secondNumber})
+    // console.log("Operator",{selectedOperator})
+    setTotal(
+      eval(`${firstNumber} ${selectedOperator} ${secondNumber}`)
+    ) 
+  }
+
+  // console.log("selectedOperator", selectOperator)
+
+
+
+ 
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <Display />
+        <Display  
+        showTotal ={showTotal}
+        total = {total}
+        firstNumber = {firstNumber}
+        secondNumber = {secondNumber}
+        selectNumber = {selectNumber}
+        
+        />
         <Specials />
         <div class="allContainer">
-        <Numbers />
-        <Operators />
+        <Numbers 
+        selectNumber = {selectNumber}
+        />
+        <Operators 
+        selectOperator={selectOperator}
+        />
         </div>
         
 

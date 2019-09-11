@@ -1,9 +1,12 @@
 import React from "react";
 
 
-const Display = () => {
-  return <div className="display">0{/* Display any props data here */}</div>;
+const Display = ({firstNumber},{secondNumber},) => {
+  return <div className="display">{firstNumber}{secondNumber}</div>;
 };
 
 
 export default Display;
+
+// {firstNumber},{secondNumber},
+// {firstNumber}{secondNumber}
