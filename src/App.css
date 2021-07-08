@@ -8,6 +8,8 @@
 }
 .display {
     margin-top: 25px;
+    margin-left:25px;
+    margin-bottom:25px;
     height: 100px;
     width: 450px;
     border-radius: 50px;
@@ -16,7 +18,73 @@
     box-shadow: 1px 1px #322c2d;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     padding-right: 8%;
     font-size: 5.0rem;
   }
+  .numberContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left:2%;
+      width:70%;
+  }
+  .numberButtons{
+      height:80px;
+      width:80px;
+      border-radius: 50%;
+      margin:10px 10px;
+      font-size:30px;
+      border:2px solid #18186f;
+      background-color:#18186f;
+      color:#fff;
+      box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
+  }
+.numberButtons:nth-child(10){
+    width:180px;
+    height:70px;
+    border-radius: 35px;
+
+
+}
+
+.operatorContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: -18%;
+}
+.operatorButton{
+  
+    background-color:dodgerblue;
+    border:2px solid dodgerblue;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    margin:10px -15px;
+    font-size:30px;
+    color:#fff;
+    box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
+
+}
+.allContainer{
+    display: flex;
+}
+.specialContainer{
+    width:80%;
+    margin-left:10%;
+    /* display:flex;
+    justify-content: center; */
+}
+.specialButton{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    margin:10px;
+    background-color:rgb(30, 105, 130);
+    font-size: 30px;
+    border:2px solid rgb(30, 105, 130);
+    color:#fff;
+    box-shadow: -1px 10px 5px -5px rgba(0,0,0,0.75);
+
+}
